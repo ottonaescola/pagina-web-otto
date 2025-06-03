@@ -1,15 +1,94 @@
 body {
-    background-color: bisque;
-     font-family: Bai Jamjuree;
+    background: url('img/background.jpg');
+    background-size: cover;
+    font-family: "Montserrat", sans-serif; /* Changed to Montserrat */
+    font-weight: 400;
+    font-size: 1.2rem;
+    font-style: normal;
+    color: rgb(255, 255, 255);
 }
-footer {
-    background-color: black;
-    color: white;
-    bottom:0;
-    position:fixed;
-    width:100%;
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 3rem;
+    gap: 2rem;
 }
-footer p{
+
+.cartao {
+    margin: 1rem;
+    background-color: rgb(0, 0, 0);
+    height: 18rem;
+    flex-grow: 1;
+    flex-basis: calc(30% - 4rem);
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.cartao__conteudo {
     text-align: center;
-    font-size: 0.6rem;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 300ms ease-in-out;
+    border-radius: 1rem;
+}
+
+.cartao__conteudo h3 {
+    background-color: rgb(248, 40, 40);
+    text-align: center;
+    border: none;
+    padding: 1rem;
+    position: relative;
+    margin: 0;
+    border-radius: 1rem 1rem 0 0;
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+}
+
+.cartao__conteudo__pergunta p {
+    color: rgb(248, 182, 40);
+    margin: 2rem 1rem;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+.cartao__conteudo__resposta p {
+    color: rgb(255, 255, 255);
+    margin: 2rem 1rem;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+.cartao:hover .cartao__conteudo {
+    transform: rotateY(180deg);
+}
+
+.cartao__conteudo__resposta {
+    transform: rotateY(180deg);
+}
+
+.cartao__conteudo__pergunta,
+.cartao__conteudo__resposta {
+    backface-visibility: hidden;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 1rem;
+}
+
+footer {
+    background-color: rgb(248, 40, 40);
+    color: rgb(255, 255, 255);
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    padding: 1rem 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
+}
+
+footer p {
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: "Montserrat", sans-serif; /* Updated footer font */
 }
